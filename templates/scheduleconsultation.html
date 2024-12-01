@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
     <title>Schedule a Consultation</title>
     <style>
         /* General Styling */
@@ -54,7 +55,6 @@
 
         /* Hero Section */
         .hero {
-            background-image: url('/static/images/pexels-leeloothefirst-5408684.jpg');
             background-size: cover;
             background-position: center;
             color: #4db85b;
@@ -67,17 +67,7 @@
         }
 
         /* Consultation Form Section */
-        .consultation-form {
-            background: #44a84c;
-            padding: 2em;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2em;
-        }
 
-        .consultation-form h2 {
-            margin-bottom: 1em;
-        }
 
         .consultation-form label {
             display: block;
@@ -93,18 +83,9 @@
             border-radius: 5px;
         }
 
-        .consultation-form button {
-            padding: 0.8em 1.5em;
-            background: #21a82c;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
         .consultation-form button:hover {
-            background: #45a045;
+            background: white;
+            color: black;
         }
 
         /* Services Section */
@@ -165,7 +146,7 @@
 
         <div class="consultation-form">
             <h2>Book Your Appointment</h2>
-            <form action="/submit-consultation" method="POST">
+            <form action="/submit-consultation" method="POST" class="Form">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -183,43 +164,36 @@
 
                 <label for="message">Additional Notes:</label>
                 <textarea id="message" name="message" rows="4"></textarea>
+                <br><br>
 
-                <button type="submit">Schedule Consultation</button>
+                <button type="submit" class='Learn-More-Button'>Schedule Consultation</button>
             </form>
         </div>
-
-        <div class="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Individual Therapy</li>
-                <li>Couples Counseling</li>
-                <li>Group Therapy</li>
-                <li>Family Therapy</li>
-            </ul>
-        </div>
-
-        <div class="testimonials">
-            <h2>What Our Clients Say</h2>
-            <blockquote>
-                <p>"This therapy changed my life! The support was incredible."</p>
-                <cite>- Jane D.</cite>
-            </blockquote>
-            <blockquote>
-                <p>"I felt heard and understood. Highly recommend!"</p>
-                <cite>- John S.</cite>
-            </blockquote>
-        </div>
-
+        <h2 class="Desc" style="text-align: center;">Frequently Asked Questions.</h2>
         <div class="faqs">
-            <h2>Frequently Asked Questions</h2>
-            <h3>What should I expect during my first consultation?</h3>
-            <p>During your first consultation, we'll discuss your goals and concerns.</p>
-            <h3>How long does a session last?</h3>
-            <p>Each session typically lasts 50 minutes.</p>
+
+           
+            <div class="accordion">
+                <div class="accordion-item">
+                  <input type="checkbox" id="item1" class="accordion-checkbox">
+                  <label for="item1" class="accordion-title">What should I expect during my first consultation?</label>
+                  <div class="accordion-content">
+                    <p>During your first consultation, we'll discuss your goals and concerns.</p>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <input type="checkbox" id="item2" class="accordion-checkbox">
+                  <label for="item2" class="accordion-title">How long does a session last?</label>
+                  <div class="accordion-content">
+                    <p>Each session typically lasts 50 minutes.</p>
+                  </div>
+                </div>
+            </div>
+            
         </div>
 
         <div class="location">
-            <h2>Visit Us</h2>
+            <h2 class="Desc" style="text-align: center;">Visit Us</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345090864!2d144.95373531590416!3d-37.81627997975127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0b0a69%3A0x5045675218ceed30!2sYour%20Office%20Name!5e0!3m2!1sen!2sau!4v1616781998073!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
