@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #4CAF50;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo h2 {
+            color: #fff;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d4f4dd;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 0 2em;
+        }
+
+        .blog-post {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+            padding: 1.5em;
+        }
+
+        .blog-post h2 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+
+        .blog-post p {
+            line-height: 1.6;
+        }
+
+        .blog-post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 1em;
+        }
+
+        .blog-post a.read-more {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            background: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .blog-post a.read-more:hover {
+            background: #45a045;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h2>Psychology Insights</h2>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="schedule.html">Schedule Consultation</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="blog-section">
+        <div class="blog-post">
+            <h2>Understanding Anxiety: A Comprehensive Guide</h2>
+            <p>Anxiety is a normal reaction to stress and can be beneficial in some situations, but sometimes it can become overwhelming...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>Benefits of Cognitive Behavioral Therapy</h2>
+            <p>Cognitive Behavioral Therapy (CBT) is a form of psychotherapy that focuses on changing unhelpful cognitive distortions and behaviors...</p>
+            <img src="static/images/cbt-benefits.jpg" alt="Cognitive Behavioral Therapy">
+            <a href="#" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>How to Build Emotional Resilience</h2>
+            <p>Emotional resilience refers to one's ability to adapt to stressful situations or crises. Being emotionally resilient doesn't mean avoiding stress...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </section>
+</body>
+</html>

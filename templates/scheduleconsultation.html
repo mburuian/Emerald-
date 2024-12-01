@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Consultation</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #4CAF50;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo h2 {
+            color: #fff;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #010;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d4f4dd;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('/static/images/pexels-leeloothefirst-5408684.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #4db85b;
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+        }
+
+        /* Consultation Form Section */
+        .consultation-form {
+            background: #44a84c;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+        }
+
+        .consultation-form h2 {
+            margin-bottom: 1em;
+        }
+
+        .consultation-form label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        .consultation-form input,
+        .consultation-form textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .consultation-form button {
+            padding: 0.8em 1.5em;
+            background: #21a82c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .consultation-form button:hover {
+            background: #45a045;
+        }
+
+        /* Services Section */
+        .services {
+            margin-bottom: 2em;
+        }
+
+        .services h2 {
+            margin-bottom: 1em;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            margin-bottom: 2em;
+        }
+
+        .testimonials h2 {
+            margin-bottom: 1em;
+        }
+
+        .testimonials blockquote {
+            border-left: 4px solid #21a82c;
+            padding-left: 1em;
+            margin: 1em 0;
+        }
+
+        /* FAQs Section */
+        .faqs {
+            margin-bottom: 2em;
+        }
+
+        .faqs h2 {
+            margin-bottom: 1em;
+        }
+
+        /* Location Section */
+        .location {
+            margin-bottom: 2em;
+        }
+
+        .location h2 {
+            margin-bottom: 1em;
+        }
+
+        .location iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="schedule-consultation">
+        <div class="hero">
+            <h1>Schedule Your Consultation</h1>
+            <p>Take the first step towards a brighter future.</p>
+        </div>
+
+        <div class="consultation-form">
+            <h2>Book Your Appointment</h2>
+            <form action="/submit-consultation" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="message">Additional Notes:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Schedule Consultation</button>
+            </form>
+        </div>
+
+        <div class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Individual Therapy</li>
+                <li>Couples Counseling</li>
+                <li>Group Therapy</li>
+                <li>Family Therapy</li>
+            </ul>
+        </div>
+
+        <div class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <blockquote>
+                <p>"This therapy changed my life! The support was incredible."</p>
+                <cite>- Jane D.</cite>
+            </blockquote>
+            <blockquote>
+                <p>"I felt heard and understood. Highly recommend!"</p>
+                <cite>- John S.</cite>
+            </blockquote>
+        </div>
+
+        <div class="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <h3>What should I expect during my first consultation?</h3>
+            <p>During your first consultation, we'll discuss your goals and concerns.</p>
+            <h3>How long does a session last?</h3>
+            <p>Each session typically lasts 50 minutes.</p>
+        </div>
+
+        <div class="location">
+            <h2>Visit Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345090864!2d144.95373531590416!3d-37.81627997975127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0b0a69%3A0x5045675218ceed30!2sYour%20Office%20Name!5e0!3m2!1sen!2sau!4v1616781998073!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+</body>
+</html>
