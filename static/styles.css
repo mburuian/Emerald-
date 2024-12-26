@@ -92,9 +92,7 @@ nav ul li a:hover {
     height: fit-content;
 }
 .hero-image{
-    width: 600px;
-    height: 450px;
-    border-radius: 10% 10% 47% 9% / 10% 10% 51% 10% ;
+    
 }
 #hero::before {
     content: '';
